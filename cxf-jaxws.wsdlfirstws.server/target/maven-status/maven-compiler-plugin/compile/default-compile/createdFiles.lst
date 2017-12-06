@@ -1,0 +1,11 @@
+com\org\ws\jaxws\wsdlfirstws\Product.class
+com\org\ws\jaxws\wsdlfirstws\ObjectFactory.class
+com\org\ws\jaxws\wsdlfirstws\CreateOrdersRequest.class
+com\org\ws\jaxws\wsdlfirstws\CustomerOrdersPortType.class
+com\org\ws\jaxws\wsdlfirstws\impl\CustomersOrdersWSImpl.class
+com\org\ws\jaxws\wsdlfirstws\Order.class
+com\org\ws\jaxws\wsdlfirstws\GetOrdersRequest.class
+com\org\ws\jaxws\wsdlfirstws\GetOrdersResponse.class
+com\org\ws\jaxws\wsdlfirstws\package-info.class
+com\org\ws\jaxws\wsdlfirstws\CreateOrdersResponse.class
+com\org\ws\jaxws\wsdlfirstws\CustomerOrdersService.class

@@ -1,0 +1,5 @@
+com\org\ws\jaxws\javafirstws\dto\CreditCardInfo.class
+com\org\ws\jaxws\javafirstws\dto\PaymentProcessorResponse.class
+com\org\ws\jaxws\javafirstws\soap\PaymentProcessor.class
+com\org\ws\jaxws\javafirstws\soap\PaymentProcessorImpl.class
+com\org\ws\jaxws\javafirstws\dto\PaymentProcessorRequest.class

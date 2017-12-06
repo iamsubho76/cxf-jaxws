@@ -1,0 +1,18 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.org.ws.jaxws</groupId>
+  <artifactId>cxf-jaxws</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  <modules>
+  	<module>cxf-jaxws.wsdlfirstws.server</module>
+  	<module>cxf-jaxws.wsdlfirstws.client</module>
+  	<module>cxf-jaxws.javafirsttws.server</module>
+  	<module>cxf-jaxws.javafirsttws.usernametoken</module>
+  	<module>cxf-jaxws.mtom</module>
+  	<module>cxf-jaxws.javafirsttws.usernametoken.client</module>
+  	<module>cxf-jaxws.wsdlfirstws.jaxwshandler</module>
+  	<module>cxf-jaxws.security.server</module>
+  	<module>cxf-jaxws.security.client</module>
+  </modules>
+</project>

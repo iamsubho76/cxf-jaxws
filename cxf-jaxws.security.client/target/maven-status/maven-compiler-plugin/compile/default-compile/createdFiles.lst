@@ -1,0 +1,10 @@
+com\org\ws\jaxws\security\server\CalculateResponse.class
+com\org\ws\jaxws\security\client\ut\PasswordCallbackHandler.class
+com\org\ws\jaxws\security\server\SumResponse.class
+com\org\ws\jaxws\security\server\SumWSService.class
+com\org\ws\jaxws\security\server\ObjectFactory.class
+com\org\ws\jaxws\security\server\SumWS.class
+com\org\ws\jaxws\security\client\SumWSClient.class
+com\org\ws\jaxws\security\server\SumRequest.class
+com\org\ws\jaxws\security\server\package-info.class
+com\org\ws\jaxws\security\server\Calculate.class

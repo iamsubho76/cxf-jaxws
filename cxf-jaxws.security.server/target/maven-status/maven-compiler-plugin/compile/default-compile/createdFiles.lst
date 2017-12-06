@@ -1,0 +1,5 @@
+com\org\ws\jaxws\security\server\SumWSImpl.class
+com\org\ws\jaxws\security\server\SumWS.class
+com\org\ws\jaxws\security\server\ut\PasswordCallbackHandler.class
+com\org\ws\jaxws\security\server\dto\SumResponse.class
+com\org\ws\jaxws\security\server\dto\SumRequest.class

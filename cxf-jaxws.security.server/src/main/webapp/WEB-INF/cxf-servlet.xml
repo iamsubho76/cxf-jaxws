@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:jaxws="http://cxf.apache.org/jaxws"
+	xmlns:cxf="http://cxf.apache.org/core" xmlns:soap="http://cxf.apache.org/bindings/soap"
+	xsi:schemaLocation="http://cxf.apache.org/core http://cxf.apache.org/schemas/core.xsd http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://cxf.apache.org/bindings/soap http://cxf.apache.org/schemas/configuration/soap.xsd http://cxf.apache.org/jaxws http://cxf.apache.org/schemas/jaxws.xsd">
+
+	<jaxws:server id="sumSwervice" serviceClass="com.org.ws.jaxws.security.server.SumWS"
+		address="/sumWS">
+		<jaxws:serviceBean>
+			<bean class="com.org.ws.jaxws.security.server.SumWSImpl" />
+		</jaxws:serviceBean>
+		<jaxws:inInterceptors>
+			<bean class="org.apache.cxf.ws.security.wss4j.WSS4JInInterceptor">
+				<constructor-arg>
+					<map>
+						<entry key="action" value="UsernameToken Encrypt Signature Timestamp" />
+						<entry key="passwordType" value="PasswordText" />
+						<entry key="passwordCallbackRef" value-ref="myPasswordCallback" />
+						<entry key="decryptionPropFile" value="properties/serviceKeyStore.properties" />
+						<entry key="signaturePropFile" value="properties/serviceKeyStore.properties" />
+					</map>
+				</constructor-arg>
+			</bean>
+		</jaxws:inInterceptors>
+
+		<jaxws:outInterceptors>
+			<bean class="org.apache.cxf.ws.security.wss4j.WSS4JOutInterceptor">
+				<constructor-arg>
+					<map>
+						<entry key="action" value="Encrypt Signature Timestamp" />
+						<entry key="passwordCallbackRef" value-ref="myPasswordCallback" />
+						<entry key="encryptionPropFile" value="properties/serviceKeyStore.properties" />
+						<entry key="encryptionUser" value="myclientkey" />
+						<entry key="encryptionParts" value="{Element}{http://www.w3.org./2000/09/xmldsig#}Signature;{Content}{http://schemas.xnlsoap.org/soap/envelope}Body" />
+						<entry key="signaturePropFile" value="properties/serviceKeyStore.properties" />
+						<entry key="signatureUser" value="myservicekey" />
+					</map>
+				</constructor-arg>
+			</bean>
+		</jaxws:outInterceptors>
+	</jaxws:server>
+
+	<bean id="myPasswordCallback" class="com.org.ws.jaxws.security.server.ut.PasswordCallbackHandler" />
+
+	<cxf:bus>
+		<cxf:features>
+			<cxf:logging />
+		</cxf:features>
+	</cxf:bus>
+</beans>
